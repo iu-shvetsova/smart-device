@@ -1,0 +1,22 @@
+{% extends "./templates/decorators/_base.html"  %}
+{% from './templates/macros/header.html' import header %}
+{% from './templates/macros/intro.html' import intro %}
+{% from './templates/macros/about.html' import about %}
+{% from './templates/macros/features.html' import features %}
+{% from './templates/macros/popup.html' import popup %}
+{% block page_title %}
+
+{% endblock %}
+
+{% block page_body %}
+<div class="container">
+	{{header()}}
+	{{intro()}}
+</div>
+<main class="page-main">
+	{{features(featureCards)}}
+	{{about()}}
+</main>
+<!-- <script src="js/main.js"></script> -->
+{{popup()}}
+{% endblock %}

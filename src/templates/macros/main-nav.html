@@ -1,0 +1,14 @@
+{% macro mainNav(class) %}
+<nav class="main-nav {{class if class}}">
+  <input class="visually-hidden main-nav__toggle" type="checkbox" id="toggle" name="toggle">
+  <label for="toggle">Открыть меню</label>
+  <ul class="main-nav__list">
+    <li class="main-nav__item">
+      <a href="#features" class="main-nav__link">Наши преимущества</a>
+    </li>
+    <li class="main-nav__item">
+      <a href="#about" class="main-nav__link">О компании</a>
+    </li>
+  </ul>
+</nav>
+{% endmacro %}

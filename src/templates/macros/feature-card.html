@@ -1,0 +1,8 @@
+{% macro featureCard(card) %}
+<li class="feature-card">
+    <h3 class="feature-card__title feature-card__title--{{card.className}}">{{card.title}}</h3>
+    <p class="feature-card__description">
+        {{card.description}}
+    </p>
+</li>
+{% endmacro %}

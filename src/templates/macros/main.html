@@ -1,0 +1,9 @@
+{% from './about.html' import about %}
+{% from './features.html' import features %}
+
+{% macro main() %}
+<main class="page-main">
+    {{features(featureCards)}}
+    {{about()}}
+</main>
+{% endmacro %}

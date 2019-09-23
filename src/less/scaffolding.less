@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "PT Mono";
+    src: url("../fonts/pt-mono-regular.woff2") format("woff2"),
+        url("../fonts/pt-mono-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"),
+        url("../fonts/roboto-condensed-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("../fonts/roboto-condensed-700.woff2") format("woff2"),
+        url("../fonts/roboto-condensed-700.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto-500.woff2") format("woff2"),
+        url("../fonts/roboto-500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Mono", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.5px;
+    color: #666666;
+
+    background-repeat: no-repeat;
+    background-image: url("../images/polygon3.svg");
+    background-position: 20% 70%;
+    background-size: 800px auto;
+
+    @media (min-width: @tablet-width) {
+        background-image: 
+            url("../images/polygon1.svg"),
+            url("../images/polygon2.svg"),
+            url("../images/polygon3.svg"),
+            url("../images/polygon4.svg");
+        background-position: 
+            -5% 54%,
+            -20% 95%,
+            60% 88%,
+            115% 80%;
+        background-size: 
+            350px auto,
+            500px auto,
+            900px auto,
+            350px auto;
+    }
+}
+
+.container {
+    background-color: #1b2d37;
+    background-repeat: no-repeat;
+    background-size: 320px auto;
+    background-position: top center;
+
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (max-width: @mobile-width) {
+    .container {
+        background-image: url("../images/header/bg-header-mobile@1x.jpg");
+        background-size: 320px auto;
+        background-size: cover;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx)  {
+            background-image: url("../images/header/bg-header-mobile@2x.jpg");
+        }
+    }
+}
+
+@media (min-width: @mobile-width) {
+    .container {
+        background-image: url("../images/header/bg-header-tablet@1x.jpg");
+        background-size: 750px auto;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx)  {
+            background-image: url("../images/header/bg-header-tablet@2x.jpg");
+        }
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .container {
+        background-image: url("../images/header/bg-header@1x.jpg");
+        background-size: 1920px auto;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx)  {
+            background-image: url("../images/header/bg-header@2x.jpg");
+        }
+    }
+}

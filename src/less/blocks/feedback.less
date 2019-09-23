@@ -1,0 +1,118 @@
+.feedback {
+    width: 410px;
+    padding: 33px 40px 35px 40px;
+
+    color: #ffffff;
+
+    background-color: #00b2ff;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+
+        font-family: "Roboto Condensed", 'Arial', sans-serif;
+        font-size: 28px;
+        line-height: 39px;
+    }
+
+    &__description {
+        margin: 0;
+        margin-bottom: 38px;
+        width: 400px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        margin: 0;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__field {
+        display: block;
+
+        box-sizing: border-box;
+        width: 100%;
+        padding: 14px 25px;
+        border: none;
+
+        font-family: "PT Mono", 'Arial', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+
+        background-color: rgba(255, 255, 255, 0.1);
+
+        &--big {
+            resize: none;
+
+            min-height: 105px;
+        }
+
+        &::placeholder {
+            color: inherit;
+        }
+    }
+
+    &__agreement {
+        margin: 0;
+        max-width: 400px;
+
+        order: 3;
+    }
+
+    &__checkbox + label {
+        cursor: pointer;
+
+        position: relative;
+
+        display: inline-block;
+
+        padding-left: 48px;
+
+        font-size: 14px;
+        line-height: 16px;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            box-sizing: border-box;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #ffffff;
+        }
+    }
+
+    &__checkbox:checked + label::after {
+        content: "";
+
+        position: absolute;
+        top: 8px;
+        left: 8px;
+
+        transform: translate(-50%, -50%);
+
+        width: 8px;
+        height: 8px;
+
+        background-image: url("../images/feedback/yes.svg");
+        background-repeat: no-repeat;
+        background-size: 8px auto;
+        background-position: center center;
+    }
+
+    &__button {
+        margin-bottom: 35px;
+    }
+}

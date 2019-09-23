@@ -1,0 +1,145 @@
+.main-header {
+  padding-top: 30px;
+  padding-right: 25px;
+
+  color: #ffffff;
+
+  @media (max-width: 1110px) {
+    padding-top: 20px;
+    padding-right: 0;
+
+    font-size: 0;
+  }
+
+  &__wrapper {
+    max-width: 1430px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 202px;
+    height: 52px;
+
+    @media (max-width: @mobile-width) {
+      width: auto;
+      height: auto;
+      
+      & img {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--left {
+      position: relative;
+      max-width: 357px;
+
+      @media (max-width: 1110px) {
+        max-width: 100%;
+      }
+    }
+
+    &--right {
+      max-width: 631px;
+
+      @media (max-width: 1110px) {
+        max-width: 90px;
+        margin-left: 35px;
+      }
+
+      @media (max-width: @mobile-width) {
+        max-width: 80px;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &__contacts {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    max-width: 429px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+
+    padding-left: 35px;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      transform: translateY(-50%);
+
+      width: 20px;
+      height: 20px;
+
+      background-repeat: no-repeat;
+      background-position: center left;
+
+      @media (max-width: 1110px) {
+        width: 26px;
+        height: 26px;
+
+        background-position: center left;
+      }
+    }
+
+
+    &--phone::before {
+      background-image: url("../images/header/phone.svg");
+      background-size: 17px auto;
+
+      @media (max-width: 1110px) {
+        background-size: 26px auto;
+      }
+    }
+
+    &--email::before {
+      background-image: url("../images/header/mail.svg");
+      background-size: 19px auto;
+
+      @media (max-width: 1110px) {
+        background-size: 25px auto;
+      }
+    }
+  }
+
+  &__button {
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+
+    @media (max-width: 1110px) {
+      display: none;
+    }
+  }
+}

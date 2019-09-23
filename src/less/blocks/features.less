@@ -1,0 +1,34 @@
+.features {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 112px;
+    padding: 0 25px;
+    max-width: 1220px;
+    width: 100%;
+
+    @media (max-width: @tablet-width) {
+        margin-top: 55px;
+    }
+
+    @media (max-width: @mobile-width) {
+        margin-top: 37px;
+        padding: 0 14px;
+    }
+
+    &__list {
+        list-style: none;
+
+        margin: 0;
+        padding: 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+
+        @media(max-width: @mobile-width) {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            justify-items: center; 
+        }
+    }
+}

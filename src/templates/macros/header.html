@@ -1,0 +1,34 @@
+{% from './main-nav.html' import mainNav %}
+
+{% macro header() %}
+<header class="main-header">
+  <div class="main-header__wrapper">
+    <div class="main-header__inner main-header__inner--left">
+      <a class="main-header__logo">
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/header/logo-mobile.svg">
+            <img src="images/header/logo.svg" width="202" height="52" alt="Логотип Смарт Девайса.">
+        </picture>
+      </a>
+      {{mainNav('main-header__main-nav')}}
+    </div>
+
+    <div class="main-header__inner main-header__inner--right">
+      <ul class="main-header__contacts">
+        <li class="main-header__item main-header__item">
+          <a href="mailto:info@sd.ru" class="main-header__link main-header__link--email">
+            <span class="main-header__text">info@sd.ru</span>
+          </a>
+        </li>
+        <li class="main-header__item main-header__item">
+          <a href="tel:+74950005252" class="main-header__link main-header__link--phone">
+              <span class="main-header__text">+7 (495) 000 52 52</span>
+          </a>
+        </li>
+      </ul>
+      <a href="#feedback" class="main-header__button">Заказать звонок</a>
+    </div>
+
+  </div>
+</header>
+{% endmacro %}
